@@ -1,0 +1,8 @@
+<h1>Restaurants</h1>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+  <li><strong><%= restaurant.name.capitalize %></strong> : <%= restaurant.category %></li>
+  <%= link_to restaurant_path(restaurant), method: :delete, data: { confirm: "Are you sure? "} %>
+  <% end %>
+</ul>
